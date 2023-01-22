@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad82745-4d6f-476f-a7a1-722cd648fa3f" name="Changes" comment="e setting written">
+    <list default="true" id="6ad82745-4d6f-476f-a7a1-722cd648fa3f" name="Changes" comment="refined PrimeList.searchList()">
+      <change afterPath="$PROJECT_DIR$/src/Decrypt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Encrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Encrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Keys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrimeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeList.java" afterDir="false" />
     </list>
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674411077052</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refined PrimeList.searchList()">
+      <created>1674412203795</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674412203795</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +152,7 @@
     <MESSAGE value="encryptor needs to be rewritten using big int" />
     <MESSAGE value="e setting implementation needs work" />
     <MESSAGE value="e setting written" />
-    <option name="LAST_COMMIT_MESSAGE" value="e setting written" />
+    <MESSAGE value="refined PrimeList.searchList()" />
+    <option name="LAST_COMMIT_MESSAGE" value="refined PrimeList.searchList()" />
   </component>
 </project>

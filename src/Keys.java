@@ -4,10 +4,10 @@ public class Keys
     private final int q;
     private final long n;
     private final long z;
-    private final int e;
-    private final int d;
+    private final long e;
+    private final long d;
 
-    public Keys()
+    Keys()
     {
         PrimeList pl = new PrimeList();
         p = pl.getPrime();
@@ -18,7 +18,7 @@ public class Keys
         d = getD(e, z);
     }
 
-    public Keys(int _p, int _q)
+    Keys(int _p, int _q)
     {
         PrimeList pl = new PrimeList();
         p = _p;
@@ -29,16 +29,26 @@ public class Keys
         d = getD(e, z);
     }
 
-    public int getD(int _e, long _z)
+    Keys(int _p, int _q, int _e)
     {
-        int e = _e;
+        p = _p;
+        q = _q;
+        n = (long) p * q;
+        z = (long) (p - 1) * (q - 1);
+        e = _e;
+        d = getD(e, z);
+    }
+
+    public long getD(long _e, long _z)
+    {
+        long e = _e;
         long z = _z;
-        int d = 0;
-        int t1 = 0;
-        int t2 = 1;
+        long d = 0;
+        long t1 = 0;
+        long t2 = 1;
         long quot;
         long mod;
-        int q;
+        long q;
 
         while(e != 0)
         {
@@ -50,8 +60,9 @@ public class Keys
             t1 = t2;
             t2 = q;
         }
-
-        return (int) ((t1 > 0) ? t1 : (_z + t1));
+        System.out.println(_z);
+        System.out.println(t1);
+        return ((t1 > 0) ? t1 : (_z + t1));
     }
 
     public int getP() {
@@ -70,11 +81,11 @@ public class Keys
         return z;
     }
 
-    public int getE() {
+    public long getE() {
         return e;
     }
 
-    public int getD() {
+    public long getD() {
         return d;
     }
 

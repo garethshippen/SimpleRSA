@@ -6,9 +6,10 @@ public class PrimeList
     private ArrayList<Integer> primes = new ArrayList<>();
     private int arraySize = 0;
 
-    public PrimeList()
+    //TODO modify to handle URIs
+    PrimeList()
     {
-        File file = new File("src\\SearchTest.txt");
+        File file = new File("src\\primenumbers.csv");
         String line;
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
