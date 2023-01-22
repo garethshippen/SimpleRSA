@@ -8,7 +8,7 @@ public class PrimeList
 
     public PrimeList()
     {
-        File file = new File("src\\primenumbers.csv");
+        File file = new File("src\\SearchTest.txt");
         String line;
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -46,26 +46,40 @@ public class PrimeList
         int high = arraySize - 1;
         int low = 0;
         int pivot = (high - low) / 2;
+        boolean execute = true;
+        boolean flag = false;
 
-        while(arraySize != 1)
+        while(arraySize != 1 && execute)
         {
             if(primes.get(pivot) == _target)
             {
-                return pivot;
+                execute = false;
+            }
+            else if(primes.get(high) < _target)
+            {
+                pivot = high;
+                execute = false;
+            }
+            else if(_target < low)
+            {
+                pivot = -1;
+                execute = false;
             }
             else if(primes.get(pivot) < _target)
             {
                 low = pivot;
                 arraySize = high - low;
                 pivot = arraySize / 2 + low;
+                flag = false;
             }
             else
             {
                 high = pivot;
                 arraySize = high - low;
                 pivot = high - (arraySize / 2);
+                flag = true;
             }
         }
-        return pivot;
+        return flag ? (pivot - 1) : pivot; //fixes off by one problem
     }
 }

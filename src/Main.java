@@ -1,10 +1,8 @@
 public class Main {
     public static void main(String[] args)
     {
-        Keys keys = new Keys();
-        Encrypt encrypt = new Encrypt(keys.getE(), keys.getN());
+        PrimeList primeList = new PrimeList();
 
-        String message = encrypt.encrypt("Hello, world!");
-        System.out.println(message);
+        System.out.println(primeList.searchList(-1));
     }
 }
