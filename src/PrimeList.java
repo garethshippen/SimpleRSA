@@ -31,4 +31,14 @@ public class PrimeList
         int index = (int) (Math.random() * arraySize);
         return primes.get(index);
     }
+
+    //When searching for an e, if n is small the size of the pool of potential e's is small.
+    //Trial and error e selecting is too slow.
+    //TODO Limit pool of numbers for e
+    public int getPrime(int _maxValue)
+    {
+        primes.indexOf(_maxValue);
+        int index = (int) (Math.random() * arraySize);
+        return primes.get(index);
+    }
 }

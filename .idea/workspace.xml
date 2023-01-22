@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad82745-4d6f-476f-a7a1-722cd648fa3f" name="Changes" comment="Key values generator added.">
-      <change afterPath="$PROJECT_DIR$/src/Encrypt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6ad82745-4d6f-476f-a7a1-722cd648fa3f" name="Changes" comment="encryptor needs to be rewritten using big int">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Encrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Encrypt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Keys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrimeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primenumbers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/primenumbers.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674388852755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="encryptor needs to be rewritten using big int">
+      <created>1674393982424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674393982424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,6 +126,22 @@
     <MESSAGE value="Setting up project" />
     <MESSAGE value="Prime getter writen and working" />
     <MESSAGE value="Key values generator added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Key values generator added." />
+    <MESSAGE value="encryptor needs to be rewritten using big int" />
+    <option name="LAST_COMMIT_MESSAGE" value="encryptor needs to be rewritten using big int" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>1</line>
+          <properties class="Main" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

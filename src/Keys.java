@@ -82,28 +82,4 @@ public class Keys
                 ", d=" + d +
                 '}';
     }
-
-    //FOR DEBUGGING
-
-    public Keys(int _p, int _q, int _e)
-    {
-        p = _p;
-        q = _q;
-        n = (long) p * q;
-        z = (long) (p - 1) * (q-1);
-        e = _e;
-        d = getD(e, z);
-    }
-
-    public Keys(int _e)
-    {
-        PrimeList pl = new PrimeList();
-        p = pl.getPrime();
-        q = pl.getPrime();
-        n = (long) p * q;
-        z = (long) (p - 1) * (q-1);
-        e = _e;
-        d = getD(e, z);
-    }
-
 }
