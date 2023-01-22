@@ -14,14 +14,21 @@ public class Keys
         q = pl.getPrime();
         n = (long) p * q;
         z = (long) (p - 1) * (q-1);
-
-        int temp;
-        do {
-            temp = pl.getPrime();
-        } while (temp > n);
-        e = temp;
+        e = pl.getPrime(n);
         d = getD(e, z);
     }
+
+    public Keys(int _p, int _q)
+    {
+        PrimeList pl = new PrimeList();
+        p = _p;
+        q = _q;
+        n = (long) p * q;
+        z = (long) (p - 1) * (q - 1);
+        e = pl.getPrime(n);
+        d = getD(e, z);
+    }
+
     public int getD(int _e, long _z)
     {
         int e = _e;
