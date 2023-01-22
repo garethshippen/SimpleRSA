@@ -27,3 +27,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/src/utf8sample.txt
+/src/utf16sample.txt
+/src/primesbelow100.csv

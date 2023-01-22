@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad82745-4d6f-476f-a7a1-722cd648fa3f" name="Changes" comment="Setting up project">
-      <change afterPath="$PROJECT_DIR$/src/PrimeList.java" afterDir="false" />
+    <list default="true" id="6ad82745-4d6f-476f-a7a1-722cd648fa3f" name="Changes" comment="Key values generator added.">
+      <change afterPath="$PROJECT_DIR$/src/Encrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Keys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Keys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primenumbers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/primenumbers.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674383530223</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Prime getter writen and working">
+      <created>1674385429054</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674385429054</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Key values generator added.">
+      <created>1674388852755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674388852755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setting up project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting up project" />
+    <MESSAGE value="Prime getter writen and working" />
+    <MESSAGE value="Key values generator added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Key values generator added." />
   </component>
 </project>

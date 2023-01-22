@@ -1,11 +1,11 @@
 public class Keys
 {
-    private int p = 0;
-    private int q = 0;
-    private long n = 0;
-    private long z = 0;
-    private int e = 0;
-    private int d = 0;
+    private final int p;
+    private final int q;
+    private final long n;
+    private final long z;
+    private final int e;
+    private final int d;
 
     public Keys()
     {
@@ -15,25 +15,13 @@ public class Keys
         n = (long) p * q;
         z = (long) (p - 1) * (q-1);
 
+        int temp;
         do {
-            e = pl.getPrime();
-        } while (e > n);
+            temp = pl.getPrime();
+        } while (temp > n);
+        e = temp;
         d = getD(e, z);
     }
-
-    //FOR DEBUGGING
-    /*
-    public Keys(int _p, int _q, int _e)
-    {
-        p = _p;
-        q = _q;
-        n = (long) p * q;
-        z = (long) (p - 1) * (q-1);
-        e = _e;
-        d = getD(e, z);
-    }
-    */
-
     public int getD(int _e, long _z)
     {
         int e = _e;
@@ -41,9 +29,9 @@ public class Keys
         int d = 0;
         int t1 = 0;
         int t2 = 1;
-        long quot = 0;
-        long mod = 0;
-        int q = 0;
+        long quot;
+        long mod;
+        int q;
 
         while(e != 0)
         {
@@ -59,6 +47,30 @@ public class Keys
         return (int) ((t1 > 0) ? t1 : (_z + t1));
     }
 
+    public int getP() {
+        return p;
+    }
+
+    public int getQ() {
+        return q;
+    }
+
+    public long getN() {
+        return n;
+    }
+
+    public long getZ() {
+        return z;
+    }
+
+    public int getE() {
+        return e;
+    }
+
+    public int getD() {
+        return d;
+    }
+
     @Override
     public String toString() {
         return "Keys{" +
@@ -70,4 +82,28 @@ public class Keys
                 ", d=" + d +
                 '}';
     }
+
+    //FOR DEBUGGING
+
+    public Keys(int _p, int _q, int _e)
+    {
+        p = _p;
+        q = _q;
+        n = (long) p * q;
+        z = (long) (p - 1) * (q-1);
+        e = _e;
+        d = getD(e, z);
+    }
+
+    public Keys(int _e)
+    {
+        PrimeList pl = new PrimeList();
+        p = pl.getPrime();
+        q = pl.getPrime();
+        n = (long) p * q;
+        z = (long) (p - 1) * (q-1);
+        e = _e;
+        d = getD(e, z);
+    }
+
 }
