@@ -9,7 +9,7 @@ public class PrimeList
     //TODO modify to handle URIs
     PrimeList()
     {
-        File file = new File("src\\primenumbersbelow100.csv");
+        File file = new File("src\\primenumbersfirst100.csv");
         String line;
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
