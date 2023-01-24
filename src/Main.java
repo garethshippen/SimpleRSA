@@ -1,29 +1,26 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        // ÿ = 11111111 in ascii
-        Keys keys;
-        keys = new Keys();
-        System.out.println(keys.toString());
+    public static void main(String[] args) throws Exception
+    {
+//        FindHighestPrime.find();
+        FileWriter fw = new FileWriter("src\\Results.csv");
+        BufferedWriter bw = new BufferedWriter(fw);
 
-        for(int i = 0; i < 1000; i++)
+        final int size = 100;
+        int[] results = new int[2];
+
+        for(int i = 0; i < size; i++)
         {
-            keys = new Keys();
-//            double ratio = keys.getE() / keys.getN();
-            System.out.printf("%d\t%d\n", keys.getN(), keys.getE());
+            results = FindHighestPrime.find();
+            bw.write(results[0] + ", " + results[1] + "\n");
+            System.out.println(i);
         }
-//        Encrypt encrypt = new Encrypt(keys.getE(), keys.getN());
-//        Decrypt decrypt = new Decrypt(keys.getD(), keys.getN());
-//
-//        String plain = "ÿÿÿÿÿÿ";
-//
-//        ArrayList<Long> cypher = encrypt.encrypt(plain);
-//        //System.out.println(cypher.get(0));
-//        String message = decrypt.decrypt(cypher);
-//        System.out.println(message);
+        bw.flush();
+        bw.close();
     }
 }
 
-//TODO e always seems to be much smaller than n. getPrime(n) bug?
 //TODO find largest prime the program can handle

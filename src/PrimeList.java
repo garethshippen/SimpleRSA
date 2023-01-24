@@ -3,13 +3,17 @@ import java.util.ArrayList;
 
 public class PrimeList
 {
+    public ArrayList<Integer> getPrimes() {
+        return primes;
+    }
+
     private ArrayList<Integer> primes = new ArrayList<>();
     private int arraySize = 0;
 
     //TODO modify to handle URIs
     PrimeList()
     {
-        File file = new File("src\\primenumbersfirst100.csv");
+        File file = new File("src\\primenumbers.csv");
         String line;
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -41,7 +45,7 @@ public class PrimeList
         int index = (int) (Math.random() * maxIndex);
         return primes.get(index);
     }
-    public int searchList(long _target)
+    private int searchList(long _target)
     {
         int arraySize = primes.size();
         int high = arraySize - 1;
