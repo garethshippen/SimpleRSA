@@ -1,49 +1,53 @@
 public class Keys
 {
     private final int p;
-    private final int q;
+    private int q;
     private final long n;
     private final long z;
-    private final long e;
+    private long e;
     private final long d;
 
     Keys()
     {
         PrimeList pl = new PrimeList();
         p = pl.getPrime();
-        q = pl.getPrime();
+        do
+        {
+            {
+                q = pl.getPrime();
+            }
+        }while (p == q); //p and q cannot be equal
         n = (long) p * q;
         z = (long) (p - 1) * (q-1);
         e = pl.getPrime(n);
         d = getD(e, z);
     }
 
-    Keys(int _p, int _q)
-    {
+    Keys(int _p, int _q) throws Exception {
         PrimeList pl = new PrimeList();
         p = _p;
         q = _q;
+
+        if(p == q)
+        {
+            throw new Exception("p and q cannot be equal");
+        }
+
         n = (long) p * q;
         z = (long) (p - 1) * (q - 1);
         e = pl.getPrime(n);
         d = getD(e, z);
     }
 
-    Keys(int _p, int _q, int _e)
-    {
-        p = _p;
-        q = _q;
-        n = (long) p * q;
-        z = (long) (p - 1) * (q - 1);
+    Keys(int _p, int _q, int _e) throws Exception {
+        this(_p, _q);
         e = _e;
-        d = getD(e, z);
     }
 
     public long getD(long _e, long _z)
     {
         long e = _e;
         long z = _z;
-        long d = 0;
         long t1 = 0;
         long t2 = 1;
         long quot;
