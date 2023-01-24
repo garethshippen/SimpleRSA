@@ -60,8 +60,8 @@ public class Keys
             t1 = t2;
             t2 = q;
         }
-        System.out.println(_z);
-        System.out.println(t1);
+//        System.out.println(_z);
+//        System.out.println(t1);
         return ((t1 > 0) ? t1 : (_z + t1));
     }
 
