@@ -13,24 +13,23 @@ public class Encrypt
         n = _n;
     }
 
+    //includes (e,n) at the top of the output
+    public String encryptWithKeys(String _input)
+    {
+        char[] charArray = _input.toCharArray();
+        StringBuilder output = new StringBuilder("(e: " + e + ", n: " + n + ")\n");
+        for(char c : charArray)
+        {
+            try {
+                output.append(encryptor(c) + "\n");
+            } catch (Exception ex) {
+                System.out.println("Overflow");
+                ex.printStackTrace();
+            }
+        }
+        return output.toString();
+    }
 
-//    public String encrypt(String _input)
-//    {
-//        char[] charArray = _input.toCharArray();
-//        StringBuilder output = new StringBuilder("(e: " + e + ", n: " + n + ")\n");
-//        //StringBuilder output = new StringBuilder();
-//        for(char c : charArray)
-//        {
-//            try {
-//                output.append(encryptor(c) + "\n");
-//            } catch (Exception ex) {
-//                System.out.println("Overflow");
-//                ex.printStackTrace();
-//            }
-//        }
-//        return output.toString();
-//    }
-//
     public ArrayList<Long> encrypt(String _input)
     {
         ArrayList<Long> cypher = new ArrayList<>();

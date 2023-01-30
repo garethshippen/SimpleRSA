@@ -18,7 +18,7 @@ public class Keys
             }
         }while (p == q); //p and q cannot be equal
         n = (long) p * q;
-        z = (long) (p - 1) * (q-1);
+        z = (long) (p - 1) * (q - 1);
         e = pl.getPrime(n);
         d = getD(e, z);
     }
@@ -44,6 +44,7 @@ public class Keys
         e = _e;
     }
 
+    //extended euclidian algorithm
     public long getD(long _e, long _z)
     {
         long e = _e;

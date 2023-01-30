@@ -5,6 +5,8 @@ public class Tests
 {
     // ÿ = 11111111 in ascii
     static final String testChar = "ÿ";
+
+    //finds the highest prime number that when run through the key generator returns a decrypted character that is the same as the encrypted character
     public static int[] find() throws Exception {
         boolean run = true;
         int[] results = new int[2];
@@ -35,6 +37,7 @@ public class Tests
         return results;
     }
 
+    //for a set of two prime numbers, tests whether a decrypted character is the same as the encrypted character
     public static boolean testKeys(int _p, int _q) throws Exception {
         boolean theSame = false;
         Keys keys;

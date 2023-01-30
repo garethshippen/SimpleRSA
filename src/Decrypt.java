@@ -14,8 +14,19 @@ public class Decrypt
 
     public String decrypt(ArrayList<Long> _cypher)
     {
-//        StringBuilder plaintext = new StringBuilder("(d: " + d + ", n: " + n + ")\n");
         StringBuilder plaintext = new StringBuilder("");
+        for(Long l : _cypher)
+        {
+            plaintext.append(decryptor(l));
+        }
+        return plaintext.toString();
+    }
+
+    //includes (d,n) at the top of the output
+    public String decryptWithKeys(ArrayList<Long> _cypher)
+    {
+        StringBuilder plaintext = new StringBuilder("(d: " + d + ", n: " + n + ")\n");
+
         for(Long l : _cypher)
         {
             plaintext.append(decryptor(l));
